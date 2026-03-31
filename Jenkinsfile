@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "your-dockerhub-username/school-app"
+        IMAGE_NAME = "divakar2141/school-app"
         TAG = "latest"
         GIT_REPO = "https://github.com/Divakarg63/school.git"
         GIT_BRANCH = "main"
