@@ -55,7 +55,7 @@ pipeline {
             steps {
                 sh '''
                 docker rm -f school-container || true
-                docker run -d -p 3001:3000 --name school-container $IMAGE_NAME:$TAG
+                docker run -d -p 3001:8080 --name school-container $IMAGE_NAME:$TAG
                 '''
             }
         }
