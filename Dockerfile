@@ -1,9 +1,5 @@
-FROM eclipse-temurin:21-jdk
-
-WORKDIR /app
-
-COPY target/*.jar app.jar
-
+FROM nginx:alpine
+RUN rm -rf /usr/share/nginx/html/*
+COPY . /usr/share/nginx/html
 EXPOSE 3000
-
-ENTRYPOINT ["java","-jar","app.jar"]
+CMD ["nginx", "-g", "daemon off;"]
